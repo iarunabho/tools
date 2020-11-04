@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This web app contains tools or programs that helps you with your minimal work">
+    <meta name="keywords" content="tools,html,web,app">
+    <title>Tools</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/preloader.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta property="og:title" content="Tools" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./css/simple-line-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antic|Raleway:300">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link id="theme-style" rel="stylesheet" type="text/css" href="">
+
+</head>
+<header>
+    <div id="preloader">
+        <div id="status">
+            <div class="loadicon icon-rocket wow tada infinite" data-wow-duration="8s"></div>
+        </div>
+    </div>
+</header>
+<section class="s1">
+    <div class="main-container">
+        <div class="greeting-wrapper">
+            <h1>Hi, I'm here to help you get your work done.</h1>
+        </div>
+        <div class="intro-wrapper">
+            <div class="nav-wrapper">
+
+                <!-- Link around dots-wrapper added after tutorial video -->
+                <a href="index.html">
+                    <div class="dots-wrapper">
+                        <div id="dot-1" class="browser-dot"></div>
+                        <div id="dot-2" class="browser-dot"></div>
+                        <div id="dot-3" class="browser-dot"></div>
+                    </div>
+                </a>
+
+
+                <ul id="navigation">
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="./about-me.html">About</a></li>
+
+                </ul>
+            </div>
+
+            <div class="left-column">
+                <h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
+                <br>
+                <div id="theme-options-wrapper">
+                    <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                    <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                    <div data-mode="green" id="green-mode" class="theme-dot"></div>
+                    <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+                </div>
+
+                <p id="settings-note">*Theme settings will be saved for<br>your next vist</p>
+            </div>
+
+            <div class="right-column">
+                <h5 style="text-align: left;line-height: 0;">Click on the tools you want to use:</h5>
+                <br>
+                <ol>
+                    <li>
+                        <a href="#range-gen" rel="noopener noreferrer">Range Generator</a>
+                    </li>
+                    <li>
+                        <a href="#webviewLink" rel="noopener noreferrer">Webview Link generator</a>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="s2" id="range-gen">
+    <div class="main-container">
+        <div class="intro-wrapper">
+            <div class="left-column">
+                <h5 style="text-align: center;line-height: 0;">Range Generator</h5>
+                <br>
+                <div id="input">
+                    <form id="myForm">
+                        <h5>Enter the Range</h5>
+                        <label for="snum">Starting Number:</label>
+                        <input type="number" id="snum" name="snum" min="1"><br><br>
+                        <label for="lnum">Last Number:</label>
+                        <input type="number" id="lnum" name="lnum" min="2"><br><br>
+                        <!-- <input type="button" value="Submit" onclick="myFunction()"> -->
+                        <button type="submit" value="Submit" class="effect effect-4" onclick="myFunction()">Submit <i
+                                class="fa fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <h5 style="text-align: left;line-height: 0;">Output</h5>
+                <br>
+                <pre id="output" class="pre-scrollable">
+
+                            </pre>
+                <button id="pre-button" style="max-width: 100px;" class="effect effect-2">Copy <i
+                        class="fa fa-clipboard" aria-hidden="true"></i>
+                </button>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="s1" id="webviewLink">
+    <div class="main-container">
+        <div class="left-column">
+            <form id="myForm2">
+                <h5>Webview URL</h5>
+                <label for="url">Enter your Web URL</label>
+                <input type="text" id="url" name="url" onkeyup="success()" autocomplete="off"><br><br>
+            <button id="btn_status" type="submit" value="submit" class="effect-4" onclick="myfunc()" disabled style="text-align: center;
+                        display: inline-block;
+                        position: relative;
+                        text-decoration: none;
+                        text-transform: capitalize;
+                        border-radius: 6px;
+                        overflow: hidden;">Submit <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+            </form>
+        </div>
+
+        <div class="right-column">
+            <h5 style="text-align: center;line-height: 0;">Output</h5>
+            <br>
+            <pre id="output2" class="pre-scrollable" style="max-width: 100%;">
+
+                    </pre>
+            <button id="pre-button2" style="margin:auto;width: 100px; line-height: 3;" class="effect effect-2">Copy <i
+                    class="fa fa-clipboard" aria-hidden="true"></i>
+            </button>
+
+        </div>
+
+    </div>
+</section>
+<script type="text/javascript" src="script.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/js/loader.js"></script>
+<script>
+    var form = document.getElementById("myForm2");
+
+    function handleForm(event) {
+        event.preventDefault();
+    }
+    form.addEventListener('submit', handleForm);
+
+    function success() {
+        if (document.getElementById("url").value === "") {
+            document.getElementById('btn_status').classList.remove('effect');
+            document.getElementById('btn_status').disabled = true;
+        } else {
+            document.getElementById('btn_status').classList.add('effect');
+            document.getElementById('btn_status').disabled = false;
+        }
+    }
+
+    function myfunc() {
+        const first = "https://webviews.chatteron.io/render/pdf/?pdfUrl=%20"
+        const second = "&triggerFlow=false"
+        let value = document.getElementById("url").value;
+        let finalURL = value.trim();
+        let webview = first + finalURL + second;
+        document.getElementById("output2").innerHTML = webview;
+    }
+
+    function functionPaste() {
+        const copyText = document.getElementById("output2").textContent;
+        const textArea = document.createElement('textarea');
+        textArea.textContent = copyText;
+        document.body.append(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        textArea.remove();
+    }
+
+    function copyFunction() {
+        const copyText = document.getElementById("output2").textContent;
+        const textArea = document.createElement('textarea');
+        textArea.textContent = copyText;
+        document.body.append(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        textArea.remove();
+    }
+
+    document.getElementById('pre-button2').addEventListener('click', copyFunction);
+</script>
+<script>
+    function copyFunction() {
+        const copyText = document.getElementById("output").textContent;
+        const textArea = document.createElement('textarea');
+        textArea.textContent = copyText;
+        document.body.append(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        textArea.remove();
+    }
+
+    document.getElementById('pre-button').addEventListener('click', copyFunction);
+</script>
+<script>
+    var form = document.getElementById("myForm");
+
+    function handleForm(event) {
+        event.preventDefault();
+    }
+    form.addEventListener('submit', handleForm);
+
+    function myFunction() {
+        let temp1 = document.getElementById('snum').value;
+        let temp2 = document.getElementById('lnum').value;
+        let i;
+        let first_num = parseInt(temp1);
+        let last_num = parseInt(temp2);
+        let arr = [];
+        for (i = first_num; i <= last_num; i++) {
+            if (i.toString().length < 2 && i.toString().length > 0) {
+                arr.push('00' + i.toString())
+                console.log("executed1");
+            }
+
+            if (i.toString().length < 3 && i.toString().length > 1) {
+                arr.push('0' + i.toString());
+                console.log('executed2');
+            }
+            if (i.toString().length !== 1 && i.toString().length !== 2) {
+                arr.push(i.toString());
+                console.log('executed3');
+
+            }
+        }
+        console.log(JSON.stringify(arr))
+        document.getElementById("output").innerHTML = JSON.stringify(arr);
+    }
+</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', '', 'auto');
+    ga('send', 'pageview');
+</script>
+<script>
+    function credits() {
+        console.log('This is just a test & Thank you arvind ji 👀');
+    }
+</script>
+
+</body>
+
+</html>
